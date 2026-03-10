@@ -58,7 +58,7 @@ export default function Home() {
             className="text-sm font-bold uppercase tracking-[0.3em] mb-4"
             style={{ color: "#c9a227" }}
           >
-            467 E 138th St, Bronx, NY 10454
+            {/* ...existing code... */}
             Welcome to
           </p>
           <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 leading-tight">
