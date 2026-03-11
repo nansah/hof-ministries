@@ -212,7 +212,7 @@ export default function SchedulePage() {
                       <div className="sm:w-28 shrink-0">
                         {event.time.includes("–") ? (
                           <div className="font-bold text-sm leading-snug" style={{ color: "#3b1259" }}>
-                            <p>{event.time.split("–")[0].trim()}</p>
+                            <p>{event.time.split("–")[0].trim()} –</p>
                             <p>{event.time.split("–")[1].trim()}</p>
                           </div>
                         ) : (
