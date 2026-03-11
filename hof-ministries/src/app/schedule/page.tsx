@@ -210,7 +210,14 @@ export default function SchedulePage() {
                     >
                       {/* Time */}
                       <div className="sm:w-28 shrink-0">
-                        <p className="font-bold text-sm" style={{ color: "#3b1259" }}>{event.time}</p>
+                        {event.time.includes("–") ? (
+                          <div className="font-bold text-sm leading-snug" style={{ color: "#3b1259" }}>
+                            <p>{event.time.split("–")[0].trim()}</p>
+                            <p>{event.time.split("–")[1].trim()}</p>
+                          </div>
+                        ) : (
+                          <p className="font-bold text-sm" style={{ color: "#3b1259" }}>{event.time}</p>
+                        )}
                         <span
                           className="inline-block mt-1 px-2 py-0.5 rounded-full text-xs font-semibold"
                           style={{
