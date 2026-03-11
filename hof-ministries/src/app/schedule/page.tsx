@@ -34,10 +34,10 @@ const weeklySchedule = [
     color: "#5c2080",
     events: [
       {
-        time: "6:00 PM",
-        name: "Prayer Line",
-        location: "Phone / Online",
-        desc: "Join our Monday evening prayer line from wherever you are. Call in for intercession and encouragement.",
+        time: "5:00 AM – 6:00 AM",
+        name: "Morning Prayer",
+        location: "Main Sanctuary",
+        desc: "Start your Monday in God's presence. Early morning prayer open to all. Set the tone for your week.",
         type: "Prayer",
       },
     ],
@@ -47,11 +47,11 @@ const weeklySchedule = [
     color: "#6b4c35",
     events: [
       {
-        time: "7:00 PM",
-        name: "Women of Faith Meeting",
-        location: "Conference Room",
-        desc: "Our women's ministry gathers for Bible study, prayer, and fellowship every other Tuesday.",
-        type: "Ministry",
+        time: "5:00 AM – 6:00 AM",
+        name: "Morning Prayer",
+        location: "Main Sanctuary",
+        desc: "Begin your Tuesday seeking God. Morning prayer open to all members of the congregation.",
+        type: "Prayer",
       },
     ],
   },
@@ -60,7 +60,14 @@ const weeklySchedule = [
     color: "#3b1259",
     events: [
       {
-        time: "7:00 PM",
+        time: "5:00 AM – 6:00 AM",
+        name: "Morning Prayer",
+        location: "Main Sanctuary",
+        desc: "Midweek morning prayer to keep your spirit anchored in God throughout the week.",
+        type: "Prayer",
+      },
+      {
+        time: "8:00 PM – 9:00 PM",
         name: "Midweek Bible Study",
         location: "Main Sanctuary",
         desc: "Go deeper in God's Word every Wednesday. Open to all ages. Come ready to learn, discuss, and grow.",
@@ -74,10 +81,17 @@ const weeklySchedule = [
     color: "#5c2080",
     events: [
       {
-        time: "7:00 PM",
-        name: "Men's Ministry Gathering",
-        location: "Fellowship Hall",
-        desc: "Men of House of Faith gather biweekly for prayer, accountability, and fellowship.",
+        time: "5:00 AM – 6:00 AM",
+        name: "Morning Prayer",
+        location: "Main Sanctuary",
+        desc: "Thursday morning prayer — come and connect with God before the day begins.",
+        type: "Prayer",
+      },
+      {
+        time: "TBD",
+        name: "Women's Fellowship Prayer (Biweekly)",
+        location: "Conference Room",
+        desc: "Women of House of Faith gather biweekly on Thursdays for a dedicated time of prayer and fellowship.",
         type: "Ministry",
       },
     ],
@@ -87,17 +101,17 @@ const weeklySchedule = [
     color: "#c9a227",
     events: [
       {
-        time: "6:00 PM",
-        name: "Youth Ministry Service",
-        location: "Youth Room",
-        desc: "HOF Youth meets every Friday for worship, Bible study, and community. Ages 13–17.",
-        type: "Youth",
+        time: "5:00 AM – 6:00 AM",
+        name: "Morning Prayer",
+        location: "Main Sanctuary",
+        desc: "Friday morning prayer — begin your day in worship and intercession.",
+        type: "Prayer",
       },
       {
-        time: "7:30 PM",
-        name: "Corporate Prayer Meeting",
+        time: "9:00 PM – 10:00 PM",
+        name: "Evening Prayer",
         location: "Main Sanctuary",
-        desc: "Our weekly church-wide prayer gathering. Come and pray with the House of Faith family.",
+        desc: "End your Friday in prayer. Come together as a church family to seek God and intercede for one another.",
         type: "Prayer",
         featured: true,
       },
@@ -108,18 +122,11 @@ const weeklySchedule = [
     color: "#7c5c3e",
     events: [
       {
-        time: "9:00 AM",
-        name: "Men's Ministry (2nd Saturday)",
-        location: "Fellowship Hall",
-        desc: "Men's breakfast and fellowship on the second Saturday of each month.",
-        type: "Ministry",
-      },
-      {
-        time: "10:00 AM",
-        name: "Women of Faith (3rd Saturday)",
+        time: "5:00 AM – 6:00 AM",
+        name: "Morning Prayer",
         location: "Main Sanctuary",
-        desc: "Women's monthly gathering for worship, teaching, and sisterhood on the third Saturday.",
-        type: "Ministry",
+        desc: "Saturday morning prayer to close out the week in God's presence before Sunday worship.",
+        type: "Prayer",
       },
       {
         time: "4:00 PM",
@@ -174,8 +181,8 @@ export default function SchedulePage() {
             <p className="text-sm" style={{ color: "#3b1259" }}>10:00 AM every Sunday</p>
           </div>
           <div>
-            <p className="font-bold text-sm" style={{ color: "#2e0d46" }}>📞 Prayer Lines</p>
-            <p className="text-sm" style={{ color: "#3b1259" }}>Mon & Fri evenings</p>
+            <p className="font-bold text-sm" style={{ color: "#2e0d46" }}>� Morning Prayer</p>
+            <p className="text-sm" style={{ color: "#3b1259" }}>Mon–Sat, 5–6 AM</p>
           </div>
         </div>
       </section>
