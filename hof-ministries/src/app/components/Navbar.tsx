@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -16,6 +17,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header style={{ background: "#3b1259" }} className="sticky top-0 z-50 shadow-lg">
@@ -39,24 +41,35 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="px-3 py-2 rounded text-sm font-medium transition-colors"
-                style={{ color: "#e8d5b7" }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.color = "#c9a227";
-                  (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.08)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLAnchorElement).style.color = "#e8d5b7";
-                  (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
-                }}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="px-3 py-2 rounded text-sm font-medium transition-colors"
+                  style={{
+                    color: isActive ? "#c9a227" : "#e8d5b7",
+                    background: isActive ? "rgba(255,255,255,0.12)" : "transparent",
+                    borderBottom: isActive ? "2px solid #c9a227" : "2px solid transparent",
+                  }}
+                  onMouseEnter={(e) => {
+                    if (!isActive) {
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#c9a227";
+                      (e.currentTarget as HTMLAnchorElement).style.background = "rgba(255,255,255,0.08)";
+                    }
+                  }}
+                  onMouseLeave={(e) => {
+                    if (!isActive) {
+                      (e.currentTarget as HTMLAnchorElement).style.color = "#e8d5b7";
+                      (e.currentTarget as HTMLAnchorElement).style.background = "transparent";
+                    }
+                  }}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <a
               href="https://churchy.base44.app"
               target="_blank"
@@ -96,17 +109,24 @@ export default function Navbar() {
       {open && (
         <div style={{ background: "#2e0d46" }} className="lg:hidden border-t border-purple-800">
           <div className="px-4 py-3 flex flex-col gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="px-3 py-2 rounded text-sm font-medium"
-                style={{ color: "#e8d5b7" }}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = link.href === "/" ? pathname === "/" : pathname.startsWith(link.href);
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="px-3 py-2 rounded text-sm font-medium"
+                  style={{
+                    color: isActive ? "#c9a227" : "#e8d5b7",
+                    background: isActive ? "rgba(255,255,255,0.1)" : "transparent",
+                    borderLeft: isActive ? "3px solid #c9a227" : "3px solid transparent",
+                  }}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
             <a
               href="https://churchy.base44.app"
               target="_blank"

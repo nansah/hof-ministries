@@ -49,14 +49,7 @@ const ministryGroups = [
     lead: "Women's Ministry Leader",
     tags: ["Sisterhood", "Bible Study", "Retreats", "Empowerment"],
   },
-  {
-    icon: "🤲",
-    name: "Prayer & Intercession Ministry",
-    desc: "The heartbeat of House of Faith is prayer. Our intercession team covers the church, community, and nations in prayer. We host weekly prayer meetings, prayer lines, and special prayer events.",
-    meetingTime: "Fridays 6 PM + Prayer Lines",
-    lead: "Prayer Ministry Leader",
-    tags: ["Intercession", "Prayer Lines", "Fasting", "Corporate Prayer"],
-  },
+
   {
     icon: "🌍",
     name: "Community Outreach Ministry",
@@ -73,22 +66,7 @@ const ministryGroups = [
     lead: "Teaching Pastor",
     tags: ["Scripture", "Growth", "Community", "Discussion"],
   },
-  {
-    icon: "🙏",
-    name: "Senior Saints Ministry",
-    desc: "We honor and celebrate our seniors at House of Faith. This ministry provides fellowship, care, Bible study, and activities tailored specifically for our treasured senior members.",
-    meetingTime: "Monthly gatherings",
-    lead: "Senior Ministry Coordinator",
-    tags: ["Fellowship", "Care", "Bible Study", "Activities"],
-  },
-  {
-    icon: "💒",
-    name: "Marriage & Family Ministry",
-    desc: "Building strong families is central to our mission. Our Marriage & Family ministry offers premarital counseling, marriage enrichment workshops, parenting resources, and family retreats.",
-    meetingTime: "Quarterly events",
-    lead: "Family Life Pastor",
-    tags: ["Marriage", "Parenting", "Counseling", "Workshops"],
-  },
+
   {
     icon: "🎓",
     name: "Leadership Development",
