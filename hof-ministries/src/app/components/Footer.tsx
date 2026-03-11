@@ -86,6 +86,7 @@ export default function Footer() {
             <div className="mt-4 p-3 rounded-lg" style={{ background: "#3b1259" }}>
               <p className="text-xs text-white font-semibold mb-1">Sunday Service</p>
               <p className="text-xs" style={{ color: "#e8d5b7" }}>10:00 AM • Bronx, NY</p>
+              <p className="text-xs mt-1" style={{ color: "#c9a227" }}>📍 467 E 138th St, Bronx, NY 10454</p>
             </div>
           </div>
         </div>
